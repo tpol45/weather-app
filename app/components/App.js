@@ -1,6 +1,8 @@
 import React, { Component} from "react";
 import Form from "./Form.js"
 import "../App.css";
+import {connect} from "react-redux";
+
 
 class App extends Component{
   render(){
@@ -12,5 +14,14 @@ class App extends Component{
     );
   }
 }
+
+const mapStateToProps = state => {
+  return { mode: state.mode };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(App);
 
 export default App;
