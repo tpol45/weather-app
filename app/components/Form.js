@@ -21,7 +21,8 @@ class Form extends Component {
     handleSubmit (evt) {
         evt.preventDefault()
         try {
-            this.props.fetchNewCampus(this.state)
+            // this.props.fetchNewCampus(this.state)
+            console.log('good job!')
         } catch (error) {
             console.log(error)
         }
