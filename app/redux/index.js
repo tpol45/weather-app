@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import modeReducer from "./mode"
 
 const appReducer = combineReducers({
-    mode: modeReducer,
+    mode: modeReducer
   });
 
 export default appReducer;

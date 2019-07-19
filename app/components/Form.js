@@ -1,4 +1,7 @@
 import React, {Component} from "react"
+import { connect } from "react-redux";
+import {setMode} from "../redux/mode.js"
+
 
 class Form extends Component {
     constructor() {
@@ -21,8 +24,7 @@ class Form extends Component {
     handleSubmit (evt) {
         evt.preventDefault()
         try {
-            // this.props.fetchNewCampus(this.state)
-            console.log('good job!')
+            this.props.setResultsMode()
         } catch (error) {
             console.log(error)
         }
@@ -31,6 +33,7 @@ class Form extends Component {
     render () {
         return (
             <form onSubmit={this.handleSubmit}>
+                <div>{this.props.mode}</div>
                 <label htmlFor='firstName'>First Name</label>
                 <input onChange={this.handleChange} name="firstName" type="text" value={this.state.name} />
                 <label htmlFor='lastName'>Last Name</label>
@@ -42,6 +45,19 @@ class Form extends Component {
         )
     }
 }
-    
 
-export default Form;
+const mapStateToProps = state => {
+    return {mode: state.mode};
+  };
+  
+const mapDispatchToProps = dispatch => {
+  return {
+    setResultsMode: () => dispatch(setMode('results'))
+  }
+};
+  
+export default connect(
+  mapStateToProps, mapDispatchToProps
+)(Form)
+
+
