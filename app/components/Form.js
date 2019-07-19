@@ -26,7 +26,6 @@ class Form extends Component {
     handleSubmit (evt) {
         evt.preventDefault()
         try {
-
             this.props.setResultsMode()
         } catch (error) {
             console.log(error)
@@ -50,8 +49,11 @@ class Form extends Component {
   
 const mapDispatchToProps = dispatch => {
   return {
-    setResultsMode: () => dispatch(setMode('results'))
-  }
+    setResultsMode: () => dispatch(setMode('results')),
+    setFirstName: firstName => dispatch(setFirstName(firstName)),
+    setLastName: lastName => dispatch(setLastName(lastName)),
+    setZipCode: zipCode => dispatch(setZipCode(zipCode))
+    }
 };
   
 export default connect(
