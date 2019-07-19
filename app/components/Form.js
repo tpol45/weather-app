@@ -1,7 +1,9 @@
 import React, {Component} from "react"
 import { connect } from "react-redux";
-import {setMode} from "../redux/mode.js"
-
+import {setMode} from "../redux/mode"
+import {setFirstName} from "../redux/firstName"
+import {setLastName} from "../redux/lastName"
+import {setZipCode} from "../redux/zipCode"
 
 class Form extends Component {
     constructor() {
@@ -24,6 +26,7 @@ class Form extends Component {
     handleSubmit (evt) {
         evt.preventDefault()
         try {
+
             this.props.setResultsMode()
         } catch (error) {
             console.log(error)
@@ -33,22 +36,17 @@ class Form extends Component {
     render () {
         return (
             <form onSubmit={this.handleSubmit}>
-                <div>{this.props.mode}</div>
                 <label htmlFor='firstName'>First Name</label>
-                <input onChange={this.handleChange} name="firstName" type="text" value={this.state.name} />
+                <input onChange={this.handleChange} name="firstName" type="text" value={this.state.firstName} />
                 <label htmlFor='lastName'>Last Name</label>
-                <input onChange={this.handleChange} name="lastName" type="text" value={this.state.address} />
+                <input onChange={this.handleChange} name="lastName" type="text" value={this.state.lastName} />
                 <label htmlFor='zipCode'>Zip Code</label>
-                <input onChange={this.handleChange} name="zipCode" type="text" value={this.state.description} />
+                <input onChange={this.handleChange} name="zipCode" type="text" value={this.state.zipCode} />
                 <button type='submit'>Continue</button>
             </form>
         )
     }
 }
-
-const mapStateToProps = state => {
-    return {mode: state.mode};
-  };
   
 const mapDispatchToProps = dispatch => {
   return {
@@ -57,7 +55,7 @@ const mapDispatchToProps = dispatch => {
 };
   
 export default connect(
-  mapStateToProps, mapDispatchToProps
+  null, mapDispatchToProps
 )(Form)
 
 
