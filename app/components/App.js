@@ -2,7 +2,7 @@ import React, { Component} from "react";
 import Form from "./Form.js"
 import "../App.css";
 import {connect} from "react-redux"
-import WeatherPage from "./WeatherPage.js";
+import ResultsPage from "./ResultsPage";
 
 class App extends Component{
   constructor() {
@@ -13,7 +13,7 @@ class App extends Component{
       <div className="App">
         <h1> Weather App </h1>
         <h2> HII {this.props.mode}</h2>
-        <div> {this.props.mode === 'entry' ? <Form /> : <WeatherPage /> }</div>
+        <div> {this.props.mode === 'entry' ? <Form /> : <ResultsPage /> }</div>
       </div>
     );
   }

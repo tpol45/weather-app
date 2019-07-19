@@ -37,15 +37,18 @@ class Form extends Component {
 
     render () {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label htmlFor='firstName'>First Name</label>
-                <input onChange={this.handleChange} name="firstName" type="text" value={this.state.firstName} />
-                <label htmlFor='lastName'>Last Name</label>
-                <input onChange={this.handleChange} name="lastName" type="text" value={this.state.lastName} />
-                <label htmlFor='zipCode'>Zip Code</label>
-                <input onChange={this.handleChange} name="zipCode" type="text" value={this.state.zipCode} />
-                <button type='submit'>Continue</button>
-            </form>
+            <div> 
+                <div> Please Fill The Form </div>
+                <form onSubmit={this.handleSubmit}>
+                    <label htmlFor='firstName'>First Name</label>
+                    <input onChange={this.handleChange} name="firstName" type="text" value={this.state.firstName} />
+                    <label htmlFor='lastName'>Last Name</label>
+                    <input onChange={this.handleChange} name="lastName" type="text" value={this.state.lastName} />
+                    <label htmlFor='zipCode'>Zip Code</label>
+                    <input onChange={this.handleChange} name="zipCode" type="text" value={this.state.zipCode} />
+                    <button type='submit'>Continue</button>
+                </form>
+            </div>
         )
     }
 }
