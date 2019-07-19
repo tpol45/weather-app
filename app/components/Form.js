@@ -26,6 +26,9 @@ class Form extends Component {
     handleSubmit (evt) {
         evt.preventDefault()
         try {
+            this.props.setFirstName(this.state.firstName)
+            this.props.setLastName(this.state.lastName)
+            this.props.setZipCode(this.state.zipCode)
             this.props.setResultsMode()
         } catch (error) {
             console.log(error)
