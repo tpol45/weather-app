@@ -18,28 +18,28 @@ class ResultsPage extends Component{
   }
 
   render(){
-    // if (!this.props.cityInfo.city){
-    //   return(
-    //     <div>
-    //       <div>City Not Found</div>
-    //       <button onClick={this.handleClick}>Go Back</button>
-    //     </div>
-    //   )
-    // }
-    // else {
+    if (!this.props.cityInfo.city){
+      return(
+        <div className="error-message-container">
+          <div className="error-message">Zip Code Not Found</div>
+          <button className="go-back-button" onClick={this.handleClick}>Go Back</button>
+        </div>
+      )
+    }
+    else {
       return(
         <div className="results-container">
           <Greeting />
           <div className="weather-city-info"> 
-            Weather
+            <div className="weather-city-header">Weather</div>
             <WeatherInfo />
-            You are in:
+            <div className="weather-city-header">You are in:</div>
             <LocationInfo />
           </div>
         </div>
       );
     }
-  // }
+  }
 }
 
 const mapStateToProps = state => {

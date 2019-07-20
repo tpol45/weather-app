@@ -4,6 +4,7 @@ import spinner from "../../assets/spinner.png"
 import clouds from "../../assets/clouds.png"
 import rain from "../../assets/rain.png"
 import sun from "../../assets/sun.png"
+import "../App.css"
 
 
 class WeatherInfo extends Component{
@@ -12,43 +13,54 @@ class WeatherInfo extends Component{
     var date = new Date();
     if (!this.props.weather){
         return (
-            <div> <img src={spinner} /> </div>
+            <div className="weather-container"> <img src={spinner} /> </div>
         )
     }
     if (this.props.weather.description === "Clouds"){
         return (
-            <div>
-                <div> {days[date.getDay()]} {date.getMonth() + 1}/{date.getDate()}  </div>
+            <div className="weather-container">
                 <div> <img src={clouds} /> </div>
-                <div> {this.props.weather.temperature}C </div>
-                <div> Forecast: {this.props.weather.description} </div>
+                <div className="weather-text">
+                    <div> {days[date.getDay()]} {date.getMonth() + 1}/{date.getDate()}  </div>
+                    <div> {this.props.weather.temperature}C </div>
+                    <div> Forecast: {this.props.weather.description} </div>
+                </div>
             </div>
 
         )
     }
     if (this.props.weather.description === "Rain"){
         return (
-            <div>
+            <div className="weather-container">
                 <div> <img src={rain} /> </div>
-                <div> {this.props.weather.temperature}C </div>
-                <div> Forecast: {this.props.weather.description} </div>
+                <div className="weather-text">
+                    <div> {days[date.getDay()]} {date.getMonth() + 1}/{date.getDate()}  </div>
+                    <div> {this.props.weather.temperature}C </div>
+                    <div> Forecast: {this.props.weather.description} </div>
+                </div>
             </div>
         )
     }
     if (this.props.weather.description === "Clear" ){
         return (
-            <div>
+            <div className="weather-container">
                 <div> <img src={sun} /> </div>
-                <div> {this.props.weather.temperature}C </div>
-                <div> Forecast: {this.props.weather.description} </div>
+                <div className="weather-text">
+                    <div> {days[date.getDay()]} {date.getMonth() + 1}/{date.getDate()}  </div>
+                    <div> {this.props.weather.temperature}C </div>
+                    <div> Forecast: {this.props.weather.description} </div>
+                </div>
             </div>
         )
     }
     else{
         return(
-            <div>
-                <div>{this.props.weather.temperature}C</div>
-                <div>Forecast: {this.props.weather.description}</div>
+            <div className="weather-container">
+                <div className="weather-text">
+                    <div> {days[date.getDay()]} {date.getMonth() + 1}/{date.getDate()}  </div>
+                    <div>{this.props.weather.temperature}C</div>
+                    <div>Forecast: {this.props.weather.description}</div>
+                </div>
             </div>
         );
     }

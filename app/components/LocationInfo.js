@@ -4,7 +4,7 @@ import {connect} from "react-redux"
 class LocationInfo extends Component{
   render(){
     return(
-      <div>
+      <div className="city-info-container">
         <div> Zip Code: {this.props.cityInfo.zipCode} </div>
         <div> City: {this.props.cityInfo.city} </div>
         <div> State: {this.props.cityInfo.state} </div>

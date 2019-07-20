@@ -1,4 +1,4 @@
-body {background-color: #F0F0F0;}
+body {background-color: #F4F4F4;}
 
 .app-header {
   font-family: Arial;
@@ -85,10 +85,67 @@ body {background-color: #F0F0F0;}
 .results-container {
   margin: 20pt;
   font-family: Arial;
-  font-size: 15pt 
+  font-size: 15pt;
+  line-height: 20pt;
 }
 
 .weather-city-info {
   margin-top: 25pt
 }
+
+.weather-container{
+  width: 300pt;
+  height: 72pt;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 20pt;
+  border-radius: 10pt;
+  background-color: white;
+  display: flex;
+  box-shadow: 5pt 5pt 5pt 5pt rgb(231, 231, 231);
+}
+
+.weather-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10pt
+}
+
+.city-info-container{
+  width: 300pt;
+  height: 72pt;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 20pt;
+  border-radius: 10pt;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5pt 5pt 5pt 5pt rgb(231, 231, 231);
+}
+
+.error-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 50pt;
+  font-size: 20pt;
+  color: #4d4d4d;
+}
+
+.go-back-button {
+  font-family: Arial;
+  border: none;
+  color: white;
+  background-color: #4E78F6;
+  font-size: 16px;
+  padding: 10px 35px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 25pt;
+  width: 100pt;
+}
+
 
