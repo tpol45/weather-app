@@ -4,7 +4,7 @@ export const setCityInfo = cityInformation => ({ type: SET_CITY_INFO, cityInform
 
 export const getCityInfo = (zipCode) => async dispatch => {
   try {
-    let response = await fetch('https://www.zipcodeapi.com/rest/js-me32Z498UeJ3jTf3HyT1qCHrQT31qhZH2IMFgNR4Apb2zvXmhGR7uCBDqtJZX5Yn/info.json/60625/degrees')
+    let response = await fetch(`https://www.zipcodeapi.com/rest/js-me32Z498UeJ3jTf3HyT1qCHrQT31qhZH2IMFgNR4Apb2zvXmhGR7uCBDqtJZX5Yn/info.json/${zipCode}/degrees`)
     let json = await response.json()
     console.log(json)
     dispatch(setCityInfo({city: json.city, state: json.state}))

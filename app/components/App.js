@@ -11,8 +11,7 @@ class App extends Component{
   render(){
     return(
       <div className="App">
-        <h1> Weather App </h1>
-        <h2> HII {this.props.mode}</h2>
+        <h1> Location Details </h1>
         <div> {this.props.mode === 'entry' ? <Form /> : <ResultsPage /> }</div>
       </div>
     );
