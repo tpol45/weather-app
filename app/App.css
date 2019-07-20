@@ -3,20 +3,24 @@
   font-weight: semibold;
   font-size: 20pt;
   color: #4e78f6;
-  text-align: center
+  text-align: center;
+  margin-top: 25pt
 }
 
 .form-header {
+  margin-left: 15pt;
   font-family: Arial;
   font-weight: semibold;
   font-size: 20pt;
   color: #313131;
-  padding-top: 20pt;
+  padding-top: 40pt;
   padding-bottom: 30pt
 }
 
 .form{
-  margin-left: 40px
+  margin-left: 55px;
+  display: flex;
+  flex-direction: column
 }
 
 .form-label {
@@ -41,6 +45,17 @@
   margin-bottom: 20px
 }
 
-/* .submit-button {
+.submit-button {
+  font-family: Arial;
+  border: none;
+  color: white;
+  background-color: #4E78F6;
+  font-size: 16px;
+  padding: 14px 40px;
+  border-radius: 10px;
+}
 
-} */
+.submit-container {
+  text-align: center;
+  margin-top: 60px
+}

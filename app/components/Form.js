@@ -43,14 +43,14 @@ class Form extends Component {
         return (
             <div> 
                 <div className="form-header"> Please Fill the Form </div>
-                <form className="form" onSubmit={this.handleSubmit}>
-                    <div><label className="form-label" htmlFor='firstName'>First Name</label></div>
+                <form onSubmit={this.handleSubmit}>
+                    <div className="form"><div><label className="form-label" htmlFor='firstName'>First Name</label></div>
                     <div><input className="form-input" type="text" onChange={this.handleChange} name="firstName" type="text" value={this.state.firstName} /></div>
                     <div><label className="form-label" htmlFor='lastName'>Last Name</label></div>
                     <div><input className="form-input" onChange={this.handleChange} name="lastName" type="text" value={this.state.lastName} /></div>
                     <div><label className="form-label" htmlFor='zipCode'>Zip Code</label></div>
-                    <div><input className="form-input" onChange={this.handleChange} name="zipCode" type="text" value={this.state.zipCode} /></div>
-                    <div><button className="submit-button" type='submit'>Continue</button></div>
+                    <div><input className="form-input" onChange={this.handleChange} name="zipCode" type="text" value={this.state.zipCode} /></div></div>
+                    <div className="submit-container"><button className="submit-button" type='submit'>Continue</button></div>
                 </form>
             </div>
         )
