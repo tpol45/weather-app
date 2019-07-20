@@ -10,8 +10,8 @@ class App extends Component{
   }
   render(){
     return(
-      <div className="App">
-        <h1> Location Details </h1>
+      <div >
+        <div className="app-header"> Location Details </div>
         <div> {this.props.mode === 'entry' ? <Form /> : <ResultsPage /> }</div>
       </div>
     );

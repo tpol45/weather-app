@@ -5,6 +5,8 @@ import {setFirstName} from "../redux/firstName"
 import {setLastName} from "../redux/lastName"
 import {getWeatherInfo} from "../redux/weatherInfo"
 import {getCityInfo} from "../redux/cityInfo"
+import "../App.css";
+
 
 class Form extends Component {
     constructor() {
@@ -40,15 +42,15 @@ class Form extends Component {
     render () {
         return (
             <div> 
-                <div> Please Fill The Form </div>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor='firstName'>First Name</label>
-                    <input onChange={this.handleChange} name="firstName" type="text" value={this.state.firstName} />
-                    <label htmlFor='lastName'>Last Name</label>
-                    <input onChange={this.handleChange} name="lastName" type="text" value={this.state.lastName} />
-                    <label htmlFor='zipCode'>Zip Code</label>
-                    <input onChange={this.handleChange} name="zipCode" type="text" value={this.state.zipCode} />
-                    <button type='submit'>Continue</button>
+                <div className="form-header"> Please Fill the Form </div>
+                <form className="form" onSubmit={this.handleSubmit}>
+                    <div><label className="form-label" htmlFor='firstName'>First Name</label></div>
+                    <div><input className="form-input" type="text" onChange={this.handleChange} name="firstName" type="text" value={this.state.firstName} /></div>
+                    <div><label className="form-label" htmlFor='lastName'>Last Name</label></div>
+                    <div><input className="form-input" onChange={this.handleChange} name="lastName" type="text" value={this.state.lastName} /></div>
+                    <div><label className="form-label" htmlFor='zipCode'>Zip Code</label></div>
+                    <div><input className="form-input" onChange={this.handleChange} name="zipCode" type="text" value={this.state.zipCode} /></div>
+                    <div><button className="submit-button" type='submit'>Continue</button></div>
                 </form>
             </div>
         )
