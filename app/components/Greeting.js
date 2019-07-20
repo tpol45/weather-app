@@ -1,5 +1,6 @@
 import React, { Component} from "react";
 import {connect} from "react-redux"
+import "../App.css";
 
 class Greeting extends Component{
   render(){
@@ -11,7 +12,10 @@ class Greeting extends Component{
     if (hour > 12 && hour <= 16) greeting = 'Good Afternoon'
     if (hour > 16 && hour <= 24) greeting = 'Good Evening'
     return(
-      <div>{greeting}, {this.props.firstName}</div>
+      <div className="greeting-container">
+        <span className="greeting">{`${greeting}, `}</span> 
+        <span className="first-name">{this.props.firstName}</span>
+      </div>
     );
   }
 }

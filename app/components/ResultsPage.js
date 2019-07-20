@@ -4,6 +4,7 @@ import LocationInfo from "./LocationInfo"
 import WeatherInfo from "./WeatherInfo"
 import Greeting from "./Greeting"
 import {setMode} from "../redux/mode"
+import "../App.css"
 
 
 class ResultsPage extends Component{
@@ -17,26 +18,28 @@ class ResultsPage extends Component{
   }
 
   render(){
-    if (!this.props.cityInfo.city){
+    // if (!this.props.cityInfo.city){
+    //   return(
+    //     <div>
+    //       <div>City Not Found</div>
+    //       <button onClick={this.handleClick}>Go Back</button>
+    //     </div>
+    //   )
+    // }
+    // else {
       return(
-        <div>
-          <div>City Not Found</div>
-          <button onClick={this.handleClick}>Go Back</button>
-        </div>
-      )
-    }
-    else {
-      return(
-        <div>
+        <div className="results-container">
           <Greeting />
-          Weather
-          <WeatherInfo />
-          You are in:
-          <LocationInfo />
+          <div className="weather-city-info"> 
+            Weather
+            <WeatherInfo />
+            You are in:
+            <LocationInfo />
+          </div>
         </div>
       );
     }
-  }
+  // }
 }
 
 const mapStateToProps = state => {

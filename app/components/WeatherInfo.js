@@ -38,7 +38,7 @@ class WeatherInfo extends Component{
     if (this.props.weather.description === "Clear" ){
         return (
             <div>
-                <div> <img src={rain} /> </div>
+                <div> <img src={sun} /> </div>
                 <div> {this.props.weather.temperature}C </div>
                 <div> Forecast: {this.props.weather.description} </div>
             </div>
