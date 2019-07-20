@@ -1,11 +1,12 @@
 import React, { Component} from "react";
+import { connect } from "react-redux";
 import LocationInfo from "./LocationInfo"
 import WeatherInfo from "./WeatherInfo"
 import Greeting from "./Greeting"
 import {setMode} from "../redux/mode"
 
 
-export default class ResultsPage extends Component{
+class ResultsPage extends Component{
   constructor() {
     super()
     this.handleClick = this.handleClick.bind(this)
@@ -28,7 +29,9 @@ export default class ResultsPage extends Component{
       return(
         <div>
           <Greeting />
+          Weather
           <WeatherInfo />
+          You are in:
           <LocationInfo />
         </div>
       );
@@ -36,18 +39,18 @@ export default class ResultsPage extends Component{
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    setEntryMode: () => dispatch(setMode('entry'))
-  }
-};
-
 const mapStateToProps = state => {
   return {
       cityInfo: state.cityInfo
     };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    setEntryMode: () => dispatch(setMode('entry'))
+  }
+};
+
 export default connect(
-mapStateToProps
+mapStateToProps, mapDispatchToProps
 )(ResultsPage)

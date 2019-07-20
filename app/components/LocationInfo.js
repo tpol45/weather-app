@@ -5,8 +5,9 @@ class LocationInfo extends Component{
   render(){
     return(
       <div>
-        <div> {this.props.cityInfo.city} </div>
-        <div> {this.props.cityInfo.state} </div>
+        <div> Zip Code: {this.props.cityInfo.zipCode} </div>
+        <div> City: {this.props.cityInfo.city} </div>
+        <div> State: {this.props.cityInfo.state} </div>
       </div>
     );
   }

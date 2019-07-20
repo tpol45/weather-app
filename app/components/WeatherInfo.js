@@ -8,6 +8,8 @@ import sun from "../../assets/sun.png"
 
 class WeatherInfo extends Component{
   render(){
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var date = new Date();
     if (!this.props.weather){
         return (
             <div> <img src={spinner} /> </div>
@@ -16,9 +18,10 @@ class WeatherInfo extends Component{
     if (this.props.weather.description === "Clouds"){
         return (
             <div>
+                <div> {days[date.getDay()]} {date.getMonth() + 1}/{date.getDate()}  </div>
                 <div> <img src={clouds} /> </div>
+                <div> {this.props.weather.temperature}C </div>
                 <div> Forecast: {this.props.weather.description} </div>
-                <div> {this.props.weather.temperature} </div>
             </div>
 
         )
@@ -27,8 +30,8 @@ class WeatherInfo extends Component{
         return (
             <div>
                 <div> <img src={rain} /> </div>
+                <div> {this.props.weather.temperature}C </div>
                 <div> Forecast: {this.props.weather.description} </div>
-                <div> {this.props.weather.temperature} </div>
             </div>
         )
     }
@@ -36,16 +39,16 @@ class WeatherInfo extends Component{
         return (
             <div>
                 <div> <img src={rain} /> </div>
+                <div> {this.props.weather.temperature}C </div>
                 <div> Forecast: {this.props.weather.description} </div>
-                <div> {this.props.weather.temperature} </div>
             </div>
         )
     }
     else{
         return(
             <div>
+                <div>{this.props.weather.temperature}C</div>
                 <div>Forecast: {this.props.weather.description}</div>
-                <div>{this.props.weather.temperature}</div>
             </div>
         );
     }

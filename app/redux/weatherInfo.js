@@ -7,7 +7,7 @@ export const getWeatherInfo = (zipCode) => async dispatch => {
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=38435a4996663dffe589a761d1f12028`)
     let json = await response.json()
     console.log(json)
-    let celsius = json.main.temp - 273.15
+    let celsius = Math.round(json.main.temp - 273.15)
     dispatch(setWeatherInfo({zipcode: zipCode, temperature: celsius, description: json.weather[0].main}))
   } catch (err) {
     console.error(err)
