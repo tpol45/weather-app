@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import {setMode} from "../redux/mode"
 import {setFirstName} from "../redux/firstName"
 import {setLastName} from "../redux/lastName"
-import {setZipCodeDataThunk} from "../redux/zipCode"
+import {getWeatherInfo} from "../redux/weatherInfo"
+import {getCityInfo} from "../redux/cityInfo"
 
 class Form extends Component {
     constructor() {
@@ -28,7 +29,8 @@ class Form extends Component {
         try {
             this.props.setFirstName(this.state.firstName)
             this.props.setLastName(this.state.lastName)
-            this.props.setZipCodeData(this.state.zipCode)
+            this.props.getWeatherInfo(this.state.zipCode)
+            this.props.getCityInfo(this.state.zipCode)
             this.props.setResultsMode()
         } catch (error) {
             console.log(error)
@@ -58,8 +60,8 @@ const mapDispatchToProps = dispatch => {
     setResultsMode: () => dispatch(setMode('results')),
     setFirstName: firstName => dispatch(setFirstName(firstName)),
     setLastName: lastName => dispatch(setLastName(lastName)),
-    setZipCode: zipCode => dispatch(setZipCode(zipCode)),
-    setZipCodeData: zipCode => dispatch(setZipCodeDataThunk(zipCode)),
+    getWeatherInfo: zipCode => dispatch(getWeatherInfo(zipCode)),
+    getCityInfo: zipCode => dispatch(getCityInfo(zipCode))
     }
 };
   

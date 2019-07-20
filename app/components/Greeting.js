@@ -6,7 +6,7 @@ class Greeting extends Component{
     let currentTime = new Date()
     var hour = currentTime.getHours()
     let greeting
-    if (hour > 0 && hour <= 6) greeting = 'Greetings'
+    if (hour >= 0 && hour <= 6) greeting = 'Greetings'
     if (hour > 6 && hour <= 12) greeting = 'Good Morning'
     if (hour > 12 && hour <= 16) greeting = 'Good Afternoon'
     if (hour > 16 && hour <= 24) greeting = 'Good Evening'

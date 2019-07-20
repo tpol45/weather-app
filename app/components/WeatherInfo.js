@@ -6,15 +6,17 @@ import {connect} from "react-redux"
 class WeatherInfo extends Component{
   render(){
     return(
-      <div>
-      </div>
+        <div>
+            <div>{this.props.weather.description}</div>
+            <div>{this.props.weather.temperature}</div>
+        </div>
     );
   }
 }
 
 const mapStateToProps = state => {
   return {
-      zipCode: state.zipCode
+      weather: state.weather
     };
 };
 

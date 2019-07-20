@@ -9,8 +9,8 @@ export default class ResultsPage extends Component{
     return(
       <div>
         <Greeting />
-        <LocationInfo />
         <WeatherInfo />
+        <LocationInfo />
       </div>
     );
   }
