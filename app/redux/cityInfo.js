@@ -1,4 +1,4 @@
-const SET_CITY_INFO = "SET_CITY_INFO";
+export const SET_CITY_INFO = "SET_CITY_INFO";
 
 export const setCityInfo = cityInformation => ({ type: SET_CITY_INFO, cityInformation });
 
