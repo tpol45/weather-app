@@ -18,7 +18,7 @@ class ResultsPage extends Component{
   }
 
   render(){
-    if (!this.props.cityInfo.city){
+    if (this.props.cityInfo && !this.props.cityInfo.city){
       return(
         <div className="error-message-container">
           <div className="error-message">Zip Code Not Found</div>

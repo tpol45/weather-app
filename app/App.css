@@ -20,7 +20,7 @@ body {background-color: #F4F4F4;}
 }
 
 .form{
-  margin-left: 55px;
+  margin-left: 55pt;
   display: flex;
   flex-direction: column
 }
@@ -41,11 +41,11 @@ body {background-color: #F4F4F4;}
   color: #313131;
   background: transparent;
   outline: none;
-  border-right: 1px solid #f0f0f0;
-  border-left: 1px solid #f0f0f0;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #d8d8d8;
-  margin-bottom: 20px
+  border-right: 1pt solid #f0f0f0;
+  border-left: 1pt solid #f0f0f0;
+  border-top: 1pt solid #f0f0f0;
+  border-bottom: 1pt solid #d8d8d8;
+  margin-bottom: 20pt
 }
 
 .submit-button {
@@ -53,9 +53,9 @@ body {background-color: #F4F4F4;}
   border: none;
   color: white;
   background-color: #4E78F6;
-  font-size: 16px;
-  padding: 14px 40px;
-  border-radius: 10px;
+  font-size: 16pt;
+  padding: 14pt 40pt;
+  border-radius: 10pt;
 }
 
 .submit-container {
@@ -124,6 +124,7 @@ body {background-color: #F4F4F4;}
 
 .error-message-container {
   display: flex;
+  font-family: Arial;
   flex-direction: column;
   align-items: center
 }
@@ -140,9 +141,9 @@ body {background-color: #F4F4F4;}
   border: none;
   color: white;
   background-color: #4E78F6;
-  font-size: 16px;
-  padding: 10px 35px;
-  border-radius: 10px;
+  font-size: 16pt;
+  padding: 10pt 35pt;
+  border-radius: 10pt;
   text-align: center;
   margin-top: 25pt;
   width: 100pt;
